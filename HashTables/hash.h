@@ -25,4 +25,8 @@ Ht_item* create_item(char* key, char* value);
 HashTable* create_table(int size);
 void free_item(Ht_item* item);
 void free_table(HashTable* table);
+void print_table(HashTable* table);
+void ht_insert(HashTable* table, char* key, char* value);
+void handle_collision(HashTable* table, Ht_item* item);
+char* ht_search(HashTable* table, char* key);
 #endif /*HASH_H*/
