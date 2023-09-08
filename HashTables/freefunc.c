@@ -23,6 +23,8 @@ void free_table(HashTable* table)
 			free_item(item);
 	}
 
+	/*Free the overflow bucket list and its items*/
+	free_overflow_buckets(table);
 	free(table->items);
 	free(table);
 }
